@@ -1,0 +1,51 @@
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe.config
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.pdb
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\Digaly.ControlAnimations.dll
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\wclDigaly.dll
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmProcess.resources
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmShiftUp.resources
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.ListItem.resources
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.Properties.Resources.resources
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csproj.GenerateResource.Cache
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.exe
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.pdb
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmSaved.resources
+C:\Users\Tom\documents\visual studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csprojResolveAssemblyReference.cache
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe.config
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.exe
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.pdb
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe.manifest
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.application
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.pdb
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\wclDigaly.dll
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csprojResolveAssemblyReference.cache
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmProcess.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmSaved.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmSettings.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmShiftUp.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.ListItem.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.Properties.Resources.resources
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csproj.GenerateResource.Cache
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.exe.manifest
+C:\Users\Digaly\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.application
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe.config
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.exe
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.pdb
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe.manifest
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.application
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.exe
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\ShiftUp.pdb
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csprojResolveAssemblyReference.cache
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmProcess.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmSaved.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmSettings.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.frmShiftUp.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.ListItem.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.Properties.Resources.resources
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.csproj.GenerateResource.Cache
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.exe.manifest
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\obj\Debug\ShiftUp.application
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\Digaly.ControlAnimations.dll
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\ShiftUp\ShiftUp\bin\Debug\wclDigaly.dll
