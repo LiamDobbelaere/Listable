@@ -48,14 +48,6 @@ namespace Listable
                 accentColor = Properties.Settings.Default.CustomColor;
                 accentColorDark = Properties.Settings.Default.CustomColorAcc;
             }
-
-            this.BackColor = accentColor;
-            //dyTitleBar.BackColor = accentColorDark;
-            //lblTitle.BackColor = accentColorDark;
-            txtSaveloc.BackColor = accentColorDark;
-            btnBrowse.BackColor = accentColorDark;
-            btnClose.BackColor = accentColorDark;
-            btnClearArchives.BackColor = accentColorDark;
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -85,9 +77,6 @@ namespace Listable
                 chkRunStart.Checked = true;
             }
 
-            dyMainColor.BackColor = Properties.Settings.Default.CustomColor;
-            dyAccentColor.BackColor = Properties.Settings.Default.CustomColorAcc;
-
             isOpened = true;
             this.TopMost = true;
         }
@@ -95,8 +84,24 @@ namespace Listable
         private void chkUseCustom_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.UseCustomColor = chkUseCustom.Checked;
+
+            if (!chkUseCustom.Checked)
+            {
+                if (Globals.IsWin10)
+                {
+                    RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent", false);
+                    byte[] value = (byte[])key.GetValue("AccentPalette");
+                    accentColor = Color.FromArgb(value[12], value[13], value[14]);
+                    accentColorDark = Color.FromArgb(value[16], value[17], value[18]);
+
+                    Properties.Settings.Default.CustomColor = accentColor;
+                    Properties.Settings.Default.CustomColorAcc = accentColorDark;
+                }
+            }
+
             Properties.Settings.Default.Save();
             Properties.Settings.Default.Reload();
+
             RefreshColorScheme();
             suParent.RefreshColorScheme();
         }
@@ -108,17 +113,6 @@ namespace Listable
             Properties.Settings.Default.Reload();
             suParent.RefreshList();
         }
-
-        /*private void dyColorPicker1_SelectedColorChanged()
-        {
-            chkUseCustom.Checked = true;
-            Properties.Settings.Default.CustomColor = dyColorPicker1.SelectedColor;
-            Properties.Settings.Default.CustomColorAcc = ColorConversion.FromAhsb(255, dyColorPicker1.SelectedColor.GetHue(), dyColorPicker1.SelectedColor.GetSaturation(), 0.35f);
-            Properties.Settings.Default.Save();
-            Properties.Settings.Default.Reload();
-            RefreshColorScheme();
-            suParent.RefreshColorScheme();
-        }*/
 
         private void txtSaveloc_TextChanged(object sender, EventArgs e)
         {
@@ -139,33 +133,6 @@ namespace Listable
                 Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true).DeleteValue("Listable", false);
             }
         }
-
-        private void dyMainColor_Click(object sender, EventArgs e)
-        {
-            clrPicker.Color = Properties.Settings.Default.CustomColor;
-            clrPicker.ShowDialog();
-            dyMainColor.BackColor = clrPicker.Color;
-            chkUseCustom.Checked = true;
-            Properties.Settings.Default.CustomColor = clrPicker.Color;
-            Properties.Settings.Default.Save();
-            Properties.Settings.Default.Reload();
-            RefreshColorScheme();
-            suParent.RefreshColorScheme();
-        }
-
-        private void dyAccentColor_Click(object sender, EventArgs e)
-        {
-            clrPicker.Color = Properties.Settings.Default.CustomColorAcc;
-            clrPicker.ShowDialog();
-            dyAccentColor.BackColor = clrPicker.Color;
-            chkUseCustom.Checked = true;
-            Properties.Settings.Default.CustomColorAcc = clrPicker.Color;
-            Properties.Settings.Default.Save();
-            Properties.Settings.Default.Reload();
-            RefreshColorScheme();
-            suParent.RefreshColorScheme();
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -191,6 +158,17 @@ namespace Listable
                 }
             }
 
+        }
+
+        private void dyCustomCol_SelectedColorChanged()
+        {
+            chkUseCustom.Checked = true;
+            Properties.Settings.Default.CustomColor = dyCustomCol.SelectedColor;
+            Properties.Settings.Default.CustomColorAcc = ColorConversion.FromAhsb(255, dyCustomCol.SelectedColor.GetHue(), dyCustomCol.SelectedColor.GetSaturation(), 0.2f);
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+            RefreshColorScheme();
+            suParent.RefreshColorScheme();
         }
     }
 }

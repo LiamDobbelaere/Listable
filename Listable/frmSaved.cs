@@ -27,14 +27,13 @@ namespace Listable
             anims.SetStateRaw("Listable_open2", true);
             anims.Add("Listable_open3", this.MakeAnimation("Opacity", 0, 100, 0.35));
 
-            //Color setup
-            //Todo: Add Windows version check here
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent", false);
-            byte[] value = (byte[]) key.GetValue("AccentPalette");
-            accentColor = Color.FromArgb(value[12], value[13], value[14]);
-            accentColorDark = Color.FromArgb(value[16], value[17], value[18]);
-
-            this.BackColor = accentColor;
+            if (Properties.Settings.Default.SaveLocation.Length < 23) {
+                lblSaved.Text = "Saved to " + Properties.Settings.Default.SaveLocation;
+            }
+            else
+            {
+                lblSaved.Text = "Saved to .." + Properties.Settings.Default.SaveLocation.Substring(Properties.Settings.Default.SaveLocation.Length - 24, 24);
+            }
         }
 
         private void frmSaved_Load(object sender, EventArgs e)

@@ -164,6 +164,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="appicon.ico" />
+    <None Include="Resources\unpin.png" />
+    <None Include="Resources\pin.png" />
     <None Include="Resources\archive.png" />
     <None Include="Resources\delete.png" />
     <None Include="Resources\priority.png" />
@@ -185,9 +187,11 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>cd "$(ProjectDir)"
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+cd "$(ProjectDir)"
 copy  "$(OutDir)$(TargetFileName)" "$(SolutionDir)LatestBinaries\"
-copy "Required DLLs\*" "$(SolutionDir)LatestBinaries\"</PostBuildEvent>
+copy "Required DLLs\*" "$(SolutionDir)LatestBinaries\"
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

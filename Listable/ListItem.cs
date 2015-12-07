@@ -111,7 +111,7 @@ namespace Listable
         {
             if (Properties.Settings.Default.EnableArchiving)
             {
-                btnDelete.BackColor = Color.FromArgb(224, 185, 67);
+                btnDelete.BackColor = Globals.ArchiveColor;
             }
             else
             {

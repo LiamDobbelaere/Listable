@@ -60,8 +60,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = global::Listable.Properties.Settings.Default.CustomColor;
             this.ClientSize = new System.Drawing.Size(284, 64);
             this.Controls.Add(this.lblSaved);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Listable.Properties.Settings.Default, "CustomColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSaved";
             this.ShowIcon = false;

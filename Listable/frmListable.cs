@@ -16,6 +16,7 @@ namespace Listable
         public frmProcess Spawner;
         private bool isClosing = false;
         private bool ShowArchives = false;
+        private bool pinned = false;
 
         public frmListable()
         {
@@ -41,31 +42,13 @@ namespace Listable
 
         public void RefreshColorScheme()
         {
-            if (Globals.IsWin10 & Properties.Settings.Default.UseCustomColor == false)
-            {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent", false);
-                byte[] value = (byte[])key.GetValue("AccentPalette");
-                accentColor = Color.FromArgb(value[12], value[13], value[14]);
-                accentColorDark = Color.FromArgb(value[16], value[17], value[18]);
-            }
-            else
-            {
-                accentColor = Properties.Settings.Default.CustomColor;
-                accentColorDark = Properties.Settings.Default.CustomColorAcc;
-            }
-
-            this.BackColor = accentColor;
-            txtNewItem.BackColor = accentColorDark;
-            btnSettings.BackColor = accentColor;
-            tableLayoutPanel1.BackColor = accentColorDark;
-
             bool alternate = false;
             foreach (ListItem item in pnlList.Controls)
             {
                 if (alternate)
-                {
-                    item.BackColor = accentColorDark;
-                }
+                    item.BackColor = Properties.Settings.Default.CustomColorAcc;
+                else
+                    item.BackColor = Properties.Settings.Default.CustomColor;
 
                 alternate = !alternate;
             }
@@ -130,7 +113,7 @@ namespace Listable
                 btnTest.Dock = DockStyle.Top;
                 if (alternate)
                 {
-                    btnTest.BackColor = accentColorDark;
+                    btnTest.BackColor = Properties.Settings.Default.CustomColorAcc;
                 }
 
                 if (ShowArchives)
@@ -147,9 +130,20 @@ namespace Listable
         {
             if (e.KeyChar == Convert.ToChar(Keys.Return))
             {
-                StreamWriter list = File.AppendText(Properties.Settings.Default.SaveLocation);
-                list.WriteLine(txtNewItem.Text);
-                list.Close();
+                try
+                {
+                    StreamWriter list = File.AppendText(Properties.Settings.Default.SaveLocation);
+                    list.WriteLine(txtNewItem.Text);
+                    list.Close();
+                }
+                catch (Exception)
+                {
+                    pinned = true;
+                    MessageBox.Show("You haven't selected where to save the todo list! Please click the gear and select a save location.", "Hang on!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    pinned = false;
+                    e.Handled = true;
+                    return;
+                }
 
                 frmSaved savedNotification = new frmSaved();
                 savedNotification.Show();
@@ -168,6 +162,8 @@ namespace Listable
         {
             if (e.KeyChar == Convert.ToChar(Keys.Escape) & !isClosing)
             {
+                pinned = false;
+
                 //Spawner.SafeRegisterHotkey();
                 isClosing = true;
                 tmrClose.Enabled = true;
@@ -203,7 +199,18 @@ namespace Listable
                 File.WriteAllLines(archpath, archive);
             }
 
-            RefreshList();
+            foreach (ListItem item in pnlList.Controls)
+            {
+                if (item.Text == name)
+                {
+                    item.Dispose();
+                    RefreshColorScheme();
+                    return;
+                }
+            }
+
+
+            //RefreshList();
         }
 
         public void PrioritizeItemWithName(string name)
@@ -219,13 +226,15 @@ namespace Listable
 
         private void frmListable_Leave(object sender, EventArgs e)
         {
+            if (frmSettings.GetForm.isOpened || pinned) return;
+
             Spawner.SafeRegisterHotkey();
             this.Close();
         }
 
         private void frmListable_Deactivate(object sender, EventArgs e)
         {
-            if (frmSettings.GetForm.isOpened) return;
+            if (frmSettings.GetForm.isOpened || pinned) return;
 
             Spawner.SafeRegisterHotkey();
 
@@ -256,7 +265,7 @@ namespace Listable
 
         private void dyShowArchive_MouseEnter(object sender, EventArgs e)
         {
-            dyShowArchive.BackColor = Color.FromArgb(224, 185, 67);
+            dyShowArchive.BackColor = Globals.ArchiveColor;
         }
 
         private void dyShowArchive_MouseLeave(object sender, EventArgs e)
@@ -271,6 +280,21 @@ namespace Listable
         {
             ShowArchives = !ShowArchives;
             RefreshList();
+        }
+
+        private void frmListable_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPin_Click(object sender, EventArgs e)
+        {
+            pinned = !pinned;
+
+            if (pinned)
+                btnPin.ButtonImage = Properties.Resources.unpin;
+            else
+                btnPin.ButtonImage = Properties.Resources.pin;
         }
     }
 }

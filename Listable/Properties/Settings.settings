@@ -9,10 +9,10 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="CustomColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">0, 192, 192</Value>
+      <Value Profile="(Default)">23, 75, 127</Value>
     </Setting>
     <Setting Name="CustomColorAcc" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">64, 64, 64</Value>
+      <Value Profile="(Default)">16, 51, 86</Value>
     </Setting>
     <Setting Name="EnableArchiving" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

@@ -49,7 +49,7 @@ namespace Listable.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 192, 192")]
+        [global::System.Configuration.DefaultSettingValueAttribute("23, 75, 127")]
         public global::System.Drawing.Color CustomColor {
             get {
                 return ((global::System.Drawing.Color)(this["CustomColor"]));
@@ -61,7 +61,7 @@ namespace Listable.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("64, 64, 64")]
+        [global::System.Configuration.DefaultSettingValueAttribute("16, 51, 86")]
         public global::System.Drawing.Color CustomColorAcc {
             get {
                 return ((global::System.Drawing.Color)(this["CustomColorAcc"]));

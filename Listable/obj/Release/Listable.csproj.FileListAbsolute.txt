@@ -16,3 +16,4 @@ C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\Listable\Listable\
 C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\Listable\Listable\obj\Release\Listable.application
 C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\Listable\Listable\obj\Release\Listable.exe
 C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\Listable\Listable\obj\Release\Listable.pdb
+C:\Users\Tom Dobbelaere\Documents\Visual Studio 2015\Projects\Listable\Listable\obj\Release\Listable.csprojResolveAssemblyReference.cache
